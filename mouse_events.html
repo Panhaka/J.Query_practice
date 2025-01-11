@@ -1,0 +1,25 @@
+<body>
+  <h1>Mouse Events </h1>
+  <div class="box" id="mouse-box">Hover on Click Me! </div>
+  <script>
+    $(document).ready(function () {
+      alert ('Box clicker!');
+    }) 
+
+    $('#mouse-box').on('dbclick',function() {
+      alert('Box double-clicked!');
+    });
+
+    $('#mouse-box').on('mouseenter', function () {
+      $(this).addClass('highlight');
+    });
+
+    $('#mouse-box').on('mouseleave',function () {
+      $(this).removeClass('highlight');
+    });
+
+    $('#mouse-box').on('mousemove', function () {
+      console.log('Mouse Position - X: ${e.pageX}, Y:${e.pageY}');
+    });
+  </script>
+</body>
